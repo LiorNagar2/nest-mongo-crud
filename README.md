@@ -83,7 +83,8 @@ async findAll(page = 1, limit = 10) {
 ```ts
 @Post()
 async create(@Body() data: CreateUserDto) {
-  return { success: true, user: await this.service.create(data) };
+  const user = await this.userService.create(data)
+  return { success: true, user };
 }
 ```
 
