@@ -1,0 +1,42 @@
+{
+  "name": "nest-mongo-crud",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "NestJs",
+    "mongoose",
+    "crud",
+    "nest-crud"
+  ],
+  "author": "LiorNagar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiorNagar2/nest-mongo-crud.git"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/mongoose": "^10.0.0",
+    "@nestjs/swagger": "^8.1.1",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^10.4.15",
+    "@types/jest": "^29.5.14",
+    "@types/mongoose": "^5.11.0",
+    "@types/node": "^22.13.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}

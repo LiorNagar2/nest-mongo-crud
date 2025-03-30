@@ -1,0 +1,22 @@
+# Ignore node modules and build artifacts
+node_modules
+dist/**/*.map
+dist/**/*.tsbuildinfo
+
+# Ignore source files (only publish compiled code)
+src
+test
+coverage
+jest.config.js
+tsconfig.json
+tsconfig.build.json
+
+# Ignore local environment and editor files
+.env
+*.log
+.idea/
+.vscode/
+.DS_Store
+
+#ignore archives
+*.tgz
