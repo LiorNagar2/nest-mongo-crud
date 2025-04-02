@@ -19,7 +19,7 @@ npm install nest-mongo-crud
 Create a controller that extends BaseController:
 
 ```ts
-import { BaseController } from 'nest-mongo-crud';
+import { BaseController, CrudActions } from 'nest-mongo-crud';
 import { Controller } from '@nestjs/common';
 import { User } from './user.entity';
 import { UserService } from './user.service';
@@ -30,7 +30,9 @@ export class UserController extends BaseController<User> {
     super(userService);
   }
 
- static exposeRoutes = [CrudActions.CREATE, CrudActions.READ, CrudActions.UPDATE];
+  protected exposeRoutes(): CrudActions[] {
+    return [CrudActions.READ, CrudActions.CREATE, CrudActions.UPDATE, CrudActions.DELETE];
+  }
 }
 ```
 
