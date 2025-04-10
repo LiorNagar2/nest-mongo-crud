@@ -15,7 +15,7 @@ export class BaseService<T> {
         page: number = 1,
         limit: number = 10
     ): Promise<{ data: T[]; total: number; page: number; limit: number }> {
-        const skip = (page - 1) * limit;
+        const skip = Math.max((page - 1) * limit, 0);
         const [data, total] = await Promise.all([
             this.model.find(filter).skip(skip).limit(limit).exec(),
             this.model.countDocuments(filter),
